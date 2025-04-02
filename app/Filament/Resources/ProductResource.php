@@ -42,6 +42,10 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('code')
+                    ->searchable()
+                    ->badge()
+                    ->color('success'),
                 Tables\Columns\ImageColumn::make('pic')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('code')
